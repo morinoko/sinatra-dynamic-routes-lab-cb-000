@@ -16,15 +16,10 @@ class App < Sinatra::Base
     phrase = params[:phrase]
 
     final_output = ""
-    final_output.tap do |output|
-      number.times { final_output += "#{phrase}\n" }
+    number.times do
+      final_output += "#{phrase}\n"
     end
-
-    # final_string = ""
-    # (params[:number].to_i).times do
-    #   final_string += "#{params[:phrase]}\n"
-    # end
-    # final_string
+    final_string
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
