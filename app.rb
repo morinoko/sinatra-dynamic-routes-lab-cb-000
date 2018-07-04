@@ -6,6 +6,10 @@ class App < Sinatra::Base
     "Your name reversed is #{@name.reverse}!"
   end
 
+  get '/square/:number' do
+    @number = params[:num]
+  end
+
   get '/say/:number/:phrase' do
     @number = params[:number].to_i
     @phrase = params[:phrase]
