@@ -15,11 +15,12 @@ class App < Sinatra::Base
     number = params[:number].to_i
     phrase = params[:phrase]
 
-    final_output = ""
-    number.times do
-      final_output += "#{phrase}\n"
-    end
-    final_string
+    output = Array.new(number, phrase).join("\n")
+    # final_output = ""
+    # number.times do
+    #   final_output += "#{phrase}\n"
+    # end
+    # final_string
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
