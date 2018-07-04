@@ -26,19 +26,19 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-    @operation = params[:operation].downcase
-    @num1 = params[:number1].to_i
-    @num2 = params[:number2].to_i
+    operation = params[:operation].downcase
+    num1 = params[:number1].to_i
+    num2 = params[:number2].to_i
 
-    case @operation
+    case operation
     when "add"
-      "#{@num1 + @num2}"
+      "#{num1 + num2}"
     when "subtract"
-      "#{@num1 - @num2}"
+      "#{num1 - num2}"
     when "multiply"
-      "#{@num1 * @num2}"
+      "#{num1 * num2}"
     when "divide"
-      @num2 != 0 ? "#{(@num1.to_f / @num2.to_f)}" : "Cannot divide by 0!"
+      num2 != 0 ? "#{(num1.to_f / num2.to_f)}" : "Cannot divide by 0!"
     else
       "Not a valid operation"
     end
