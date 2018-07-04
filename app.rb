@@ -15,7 +15,7 @@ class App < Sinatra::Base
     @number = params[:number].to_i
     @phrase = params[:phrase]
 
-    "test"
+    "testf"
     #@number.times do { "#{@phrase}\n" }
   end
 
@@ -37,7 +37,7 @@ class App < Sinatra::Base
     when "multiply"
       "#{@num1 * @num2}"
     when "divide"
-      "#{@num1 / @num2}"
+      @num2 != 0 ? "#{@num1 / @num2}" : "Cannot divide by 0!"
     else
       "Not a valid operation"
     end
