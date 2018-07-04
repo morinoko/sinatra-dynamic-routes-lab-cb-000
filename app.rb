@@ -1,7 +1,7 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
-  get '/reverse/:name' do
+  get '/reversename/:name' do
     @name = params[:name]
     "Your name reversed is #{@name.reverse}!"
   end
