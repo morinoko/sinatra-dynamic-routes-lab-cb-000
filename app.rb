@@ -16,8 +16,8 @@ class App < Sinatra::Base
     phrase = params[:phrase]
 
     final_output = ""
-    number.tap times do
-       final_output += "#{phrase}\n"
+    final_output.tap do |output| 
+      number.times { final_output += "#{phrase}\n" }
     end
 
     # final_string = ""
